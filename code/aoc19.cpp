@@ -15,6 +15,7 @@ aoc19 [day] [input.file]
 #include <ctime>
 
 #include "Day1.h"
+#include "Day2.h"
 
 typedef std::chrono::system_clock Clock;
 
@@ -62,6 +63,11 @@ int main(int argc, char **argv) {
 	switch (dayNum) {
 		case 1: {
 			Day1 day(fileName, IntegerLines);
+			day.solve();
+			break;
+		}
+		case 2: {
+			Day2 day(fileName, IntegerLines);
 			day.solve();
 			break;
 		}
