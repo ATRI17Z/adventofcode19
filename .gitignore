@@ -3,6 +3,10 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+AdventOfCode19.sln
+code/AoC19.vcxproj
+code/AoC19.vcxproj.filters
+
 # User-specific files
 *.suo
 *.user
