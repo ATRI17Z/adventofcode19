@@ -36,7 +36,6 @@ int main(int argc, char **argv) {
 	}
 	else if (argc == 1) { // no parameters given
 	   // No input arguments, using defaults
-
 	   // Get current day of month
 		auto now = Clock::now();
 		std::time_t now_c = Clock::to_time_t(now);
@@ -67,7 +66,7 @@ int main(int argc, char **argv) {
 			break;
 		}
 		case 2: {
-			Day2 day(fileName, IntegerLines);
+			Day2 day(fileName, String);
 			day.solve();
 			break;
 		}

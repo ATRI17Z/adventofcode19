@@ -1,7 +1,10 @@
 #pragma once
 
+#include <iostream>
+#include <iomanip>
 #include <vector>
 #include <string>
+#include <chrono>
 
 #include "inputLoader.h"
 
@@ -37,11 +40,21 @@ protected:
 	void setSolutionPart1(ll solP1) { solutionPart1 = solP1; }
 	void setSolutionPart2(ll solP2) { solutionPart2 = solP2; }
 
+	void startTimer1();
+	void stopTimer1();
+	void startTimer2();
+	void stopTimer2();
+
 	int printSolution();
 	
 private:
 	ll solutionPart1;
 	ll solutionPart2;
+
+	std::chrono::high_resolution_clock::time_point t1;
+	std::chrono::high_resolution_clock::time_point t2;
+	ll executionTime1;
+	ll executionTime2;
 
 	int dayNum;
 	std::string dataFile;
@@ -51,5 +64,6 @@ private:
 	int loadData(InputStructure type);
 	int printPart1();
 	int printPart2();
+	int printTiming(ll t);
 };
 
